@@ -11,18 +11,18 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white dark:bg-google-surfaceDark rounded-2xl shadow-sm overflow-hidden border border-gray-100 dark:border-gray-800 group">
+    <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 group">
       <button 
         className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" 
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={`text-lg font-bold transition-colors duration-300 ${isOpen ? 'text-farm-primary' : 'text-gray-800 dark:text-gray-200'}`}>
+        <span className={`text-lg font-bold transition-colors duration-300 ${isOpen ? 'text-farm-primary' : 'text-gray-800'}`}>
           {question}
         </span>
         <i className={`fas fa-chevron-down text-gray-400 transition-transform duration-300 group-hover:text-farm-primary ${isOpen ? 'rotate-180' : ''}`}></i>
       </button>
-      <div className={`transition-all duration-500 ease-in-out bg-farm-light/50 dark:bg-gray-800/30 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="px-6 py-5 text-gray-600 dark:text-gray-300 border-t border-gray-50 dark:border-gray-700 leading-relaxed font-light">
+      <div className={`transition-all duration-500 ease-in-out bg-farm-light/50 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="px-6 py-5 text-gray-600 border-t border-gray-50 leading-relaxed font-light">
           {answer}
         </div>
       </div>
@@ -42,11 +42,11 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-white dark:bg-google-dark scroll-mt-24">
+    <section id="faq" className="py-20 bg-white scroll-mt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-thin text-gray-900 dark:text-white tracking-tight">자주 묻는 질문</h2>
-          <p className="mt-4 text-gray-500 dark:text-gray-400 font-light">궁금하신 내용을 확인해보세요.</p>
+          <h2 className="text-3xl md:text-5xl font-thin text-gray-900 tracking-tight">자주 묻는 질문</h2>
+          <p className="mt-4 text-gray-500 font-light">궁금하신 내용을 확인해보세요.</p>
         </div>
 
         <div 

@@ -17,13 +17,6 @@ import ContactModal from './components/ContactModal';
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'dark' || 
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
-    return false;
-  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,17 +25,6 @@ const App: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => setIsDarkMode(prev => !prev);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -53,7 +35,7 @@ const App: React.FC = () => {
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
       
       <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-1000`}>
-        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} onOpenContact={openModal} />
+        <Navbar onOpenContact={openModal} />
         <main>
           <Hero onOpenContact={openModal} />
           <Features />

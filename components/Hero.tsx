@@ -43,10 +43,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <section id="about" className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-google-dark scroll-mt-24">
+    <section id="about" className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-white scroll-mt-24">
       {/* Background Glows */}
       <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full -z-10 transition-transform duration-75 ease-out opacity-40 dark:opacity-20"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full -z-10 transition-transform duration-75 ease-out opacity-40"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       >
         <div className="absolute top-[-5%] left-[-10%] w-[45%] h-[45%] bg-green-200 blur-[120px] rounded-full"></div>
@@ -67,31 +67,31 @@ const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-thin text-gray-900 dark:text-white mb-8 leading-[1.1] tracking-[-0.05em]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-thin text-gray-900 mb-8 leading-[1.1] tracking-[-0.05em]">
               참신한 홍보 전략이 <br className="hidden md:block" />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-farm-primary via-emerald-600 to-farm-primary bg-[length:200%_auto] animate-gradient-x font-medium">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-farm-primary via-emerald-600 to-farm-primary bg-[length:200%_auto] animate-gradient-x font-light">
                 필요하신가요?
               </span>
             </h1>
 
-            <p className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-500 dark:text-gray-400 leading-relaxed font-light tracking-[-0.02em] mb-12">
+            <p className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-500 leading-relaxed font-light tracking-[-0.02em] mb-12">
               월 60만 유저가 머무르는 홈쇼핑모아와 모아농장의 독자적인 생태계에서 브랜드의 가치를 가장 임팩트 있게 전달하세요.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6">
               <button 
                 onClick={onOpenContact}
-                className="group relative inline-flex items-center justify-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-10 py-5 rounded-full font-bold text-lg overflow-hidden transition-all hover:pr-14 active:scale-95 shadow-2xl"
+                className="group relative inline-flex items-center justify-center bg-gray-900 text-white px-10 py-5 rounded-full font-bold text-lg overflow-hidden transition-all hover:pr-14 active:scale-95 shadow-2xl"
               >
                 <span>제휴 문의하기</span>
                 <i className="fas fa-arrow-right absolute right-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"></i>
               </button>
               <button 
                 onClick={handleDownloadPDF}
-                className="group text-gray-900 dark:text-white font-semibold text-lg hover:text-farm-primary transition-all flex items-center gap-3 py-4"
+                className="group text-gray-900 font-semibold text-lg hover:text-farm-primary transition-all flex items-center gap-3 py-4"
               >
                 <span>소개서 다운로드</span>
-                <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center group-hover:border-farm-primary group-hover:bg-farm-primary/10 transition-all">
+                <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-farm-primary group-hover:bg-farm-primary/10 transition-all">
                   <i className="fas fa-download text-sm"></i>
                 </div>
               </button>

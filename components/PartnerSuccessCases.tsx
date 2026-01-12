@@ -39,15 +39,15 @@ const PartnerSuccessCases: React.FC = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section className="py-24 bg-farm-light dark:bg-google-dark overflow-hidden border-t border-gray-50 dark:border-gray-900/50">
+    <section className="py-24 bg-farm-light overflow-hidden border-t border-gray-50">
       <div ref={ref as any} className={`max-w-7xl mx-auto px-6 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="mb-16">
-          <span className="text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase mb-3 block text-sm">Success Stories</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 dark:text-white tracking-tight leading-tight">
+        <div className="mb-16 text-left">
+          <span className="text-emerald-600 font-bold tracking-widest uppercase mb-3 block text-sm">Success Stories</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 tracking-tight leading-tight">
             함께 성장한 <br className="hidden sm:block" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-farm-primary font-medium">파트너 사장님의 기록</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-farm-primary font-light">파트너 사장님의 기록</span>
           </h2>
-          <p className="mt-6 text-gray-500 dark:text-gray-400 font-light max-w-2xl leading-relaxed">
+          <p className="mt-6 text-gray-500 font-light max-w-2xl leading-relaxed">
             광고비는 줄이고, 매출은 늘렸습니다. 홈쇼핑모아와 모아농장을 통해 직접적인 비즈니스 성장을 경험한 대표 사례입니다.
           </p>
         </div>
@@ -59,46 +59,46 @@ const PartnerSuccessCases: React.FC = () => {
               key={index} 
               className="group/item h-full flex flex-col"
             >
-              <div className="bg-white dark:bg-google-surfaceDark rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-2xl hover:shadow-farm-primary/10 hover:-translate-y-2 h-full flex flex-col">
+              <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:shadow-farm-primary/10 hover:-translate-y-2 h-full flex flex-col">
                 <div className="relative h-56 overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.farm} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110"
                   />
-                  <div className="absolute top-6 right-6 bg-white/95 dark:bg-black/80 backdrop-blur-md px-5 py-2 rounded-full shadow-lg border border-white/20">
+                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full shadow-lg border border-white/20">
                     <span className="text-xs font-black text-farm-primary">{item.badge}</span>
                   </div>
                 </div>
                 
-                <div className="p-10 flex-grow flex flex-col">
+                <div className="p-10 flex-grow flex flex-col text-left">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-farm-primary"></span>
                       <span className="text-[11px] font-black text-gray-400 uppercase tracking-widest">{item.farm}</span>
                     </div>
-                    <span className="text-[10px] font-bold text-gray-400 bg-gray-50 dark:bg-gray-800 px-2 py-1 rounded-md">{item.ownerInfo}</span>
+                    <span className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded-md">{item.ownerInfo}</span>
                   </div>
 
                   <div className="relative mb-6">
-                    <p className="text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight">
+                    <p className="text-lg font-medium text-gray-800 leading-tight">
                       {item.quote}
                     </p>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">
                     {item.product}
                   </h3>
                   
                   <div className="mb-4">
-                    <span className="text-3xl font-black text-emerald-600 dark:text-emerald-400">{item.metric}</span>
+                    <span className="text-3xl font-black text-emerald-600">{item.metric}</span>
                   </div>
 
-                  <p className="text-[14px] text-gray-500 dark:text-gray-400 font-light leading-relaxed mb-8">
+                  <p className="text-[14px] text-gray-500 font-light leading-relaxed mb-8">
                     {item.detail}
                   </p>
                   
-                  <div className="mt-auto pt-6 border-t border-gray-50 dark:border-gray-800 flex justify-between items-center group-hover/item:border-farm-primary/20 transition-colors">
+                  <div className="mt-auto pt-6 border-t border-gray-50 flex justify-between items-center group-hover/item:border-farm-primary/20 transition-colors">
                     <span className="text-[10px] font-black text-gray-400 group-hover/item:text-farm-primary transition-colors uppercase tracking-widest">Partner Insight</span>
                     <i className="fas fa-arrow-right text-xs text-gray-200 group-hover/item:text-farm-primary transition-all group-hover/item:translate-x-1"></i>
                   </div>

@@ -141,82 +141,82 @@ ${formData.message || '특이사항 없음'}
         </div>
       </div>
 
-      <div className={`relative w-full max-w-2xl bg-white dark:bg-google-surfaceDark rounded-[3rem] shadow-2xl overflow-hidden transition-all duration-500 transform ${isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-8'}`}>
+      <div className={`relative w-full max-w-2xl bg-white rounded-[3rem] shadow-2xl overflow-hidden transition-all duration-500 transform ${isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-8'}`}>
         
-        <button onClick={onClose} className="absolute top-8 right-8 text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors z-10">
+        <button onClick={onClose} className="absolute top-8 right-8 text-gray-400 hover:text-gray-900 transition-colors z-10">
           <i className="fas fa-times text-2xl"></i>
         </button>
 
         {!isSuccess && !showManualGuide ? (
           <div className="p-10 md:p-14 max-h-[90vh] overflow-y-auto custom-scrollbar">
-            <div className="mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/30 text-farm-primary text-[10px] font-black uppercase tracking-[0.2em] mb-4">
+            <div className="mb-12 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-farm-primary text-[10px] font-black uppercase tracking-[0.2em] mb-4">
                 <span className="w-2 h-2 rounded-full bg-farm-primary animate-pulse"></span>
                 Partner Registration
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">소싱 제휴 신청서 작성</h2>
-              <p className="mt-2 text-gray-500 dark:text-gray-400 font-light text-sm">정보를 입력하고 발송 방식을 선택해주세요.</p>
+              <h2 className="text-3xl font-bold text-gray-900 tracking-tight leading-tight">소싱 제휴 신청서 작성</h2>
+              <p className="mt-2 text-gray-500 font-light text-sm">정보를 입력하고 발송 방식을 선택해주세요.</p>
             </div>
 
             <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">업체명 <span className="text-red-500">*</span></label>
-                  <input required name="company" value={formData.company} onChange={handleChange} type="text" placeholder="사업자 등록 업체명" className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-800 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none dark:text-white text-sm" />
+                  <input required name="company" value={formData.company} onChange={handleChange} type="text" placeholder="사업자 등록 업체명" className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none text-sm" />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">담당자 성함 <span className="text-red-500">*</span></label>
-                  <input required name="name" value={formData.name} onChange={handleChange} type="text" placeholder="담당 성함" className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-800 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none dark:text-white text-sm" />
+                  <input required name="name" value={formData.name} onChange={handleChange} type="text" placeholder="담당 성함" className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none text-sm" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">연락처 <span className="text-red-500">*</span></label>
-                  <input required name="contact" value={formData.contact} onChange={handleChange} type="tel" placeholder="010-0000-0000" className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-800 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none dark:text-white text-sm" />
+                  <input required name="contact" value={formData.contact} onChange={handleChange} type="tel" placeholder="010-0000-0000" className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none text-sm" />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">이메일 <span className="text-red-500">*</span></label>
-                  <input required name="email" value={formData.email} onChange={handleChange} type="email" placeholder="email@company.com" className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-800 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none dark:text-white text-sm" />
+                  <input required name="email" value={formData.email} onChange={handleChange} type="email" placeholder="email@company.com" className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none text-sm" />
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50/80 to-emerald-50/50 dark:from-green-900/10 dark:to-emerald-900/5 p-8 rounded-[2.5rem] border border-green-100 dark:border-green-800/30 shadow-inner">
+              <div className="bg-gradient-to-br from-green-50/80 to-emerald-50/50 p-8 rounded-[2.5rem] border border-green-100 shadow-inner">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-8 h-8 rounded-full bg-farm-primary flex items-center justify-center text-white text-xs">
                     <i className="fas fa-check-double"></i>
                   </div>
-                  <h4 className="text-sm font-bold text-gray-800 dark:text-white uppercase tracking-wider">필수 협업 조건 확인</h4>
+                  <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wider">필수 협업 조건 확인</h4>
                 </div>
                 
                 <div className="space-y-4">
-                  <label className="flex items-center gap-4 cursor-pointer group bg-white dark:bg-gray-800 p-5 rounded-[1.5rem] shadow-sm hover:shadow-md border border-transparent hover:border-farm-primary/30 transition-all">
+                  <label className="flex items-center gap-4 cursor-pointer group bg-white p-5 rounded-[1.5rem] shadow-sm hover:shadow-md border border-transparent hover:border-farm-primary/30 transition-all">
                     <div className="relative flex items-center">
-                      <input required type="checkbox" name="checkSupply" checked={formData.checkSupply} onChange={handleChange} className="peer h-7 w-7 cursor-pointer appearance-none rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 checked:bg-farm-primary checked:border-farm-primary transition-all" />
+                      <input required type="checkbox" name="checkSupply" checked={formData.checkSupply} onChange={handleChange} className="peer h-7 w-7 cursor-pointer appearance-none rounded-xl border-2 border-gray-200 bg-white checked:bg-farm-primary checked:border-farm-primary transition-all" />
                       <i className="fas fa-check absolute text-[12px] text-white opacity-0 peer-checked:opacity-100 left-[8px] transition-opacity"></i>
                     </div>
                     <div className="flex flex-col text-left">
-                      <span className="text-sm font-bold text-gray-800 dark:text-gray-100">500개 이상 상품 공급이 가능합니다.</span>
+                      <span className="text-sm font-bold text-gray-800">500개 이상 상품 공급이 가능합니다.</span>
                       <span className="text-[11px] text-gray-400 font-light mt-0.5">원활한 3주 미션 진행을 위한 최소 재고량</span>
                     </div>
                   </label>
 
-                  <label className="flex items-center gap-4 cursor-pointer group bg-white dark:bg-gray-800 p-5 rounded-[1.5rem] shadow-sm hover:shadow-md border border-transparent hover:border-farm-primary/30 transition-all">
+                  <label className="flex items-center gap-4 cursor-pointer group bg-white p-5 rounded-[1.5rem] shadow-sm hover:shadow-md border border-transparent hover:border-farm-primary/30 transition-all">
                     <div className="relative flex items-center">
-                      <input required type="checkbox" name="checkCS" checked={formData.checkCS} onChange={handleChange} className="peer h-7 w-7 cursor-pointer appearance-none rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 checked:bg-farm-primary checked:border-farm-primary transition-all" />
+                      <input required type="checkbox" name="checkCS" checked={formData.checkCS} onChange={handleChange} className="peer h-7 w-7 cursor-pointer appearance-none rounded-xl border-2 border-gray-200 bg-white checked:bg-farm-primary checked:border-farm-primary transition-all" />
                       <i className="fas fa-check absolute text-[12px] text-white opacity-0 peer-checked:opacity-100 left-[8px] transition-opacity"></i>
                     </div>
                     <div className="flex flex-col text-left">
-                      <span className="text-sm font-bold text-gray-800 dark:text-gray-100">자체 배송 및 CS 대응이 가능합니다.</span>
+                      <span className="text-sm font-bold text-gray-800">자체 배송 및 CS 대응이 가능합니다.</span>
                       <span className="text-[11px] text-gray-400 font-light mt-0.5">고객 문의 및 배송 관리에 대한 직접 처리 능력</span>
                     </div>
                   </label>
                 </div>
               </div>
 
-              <div>
+              <div className="text-left">
                 <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1 block">주요 취급 품목 <span className="text-red-500">*</span></label>
-                <input required name="products" value={formData.products} onChange={handleChange} type="text" placeholder="예: 한라봉, 사과, 샤인머스캣 등" className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-800 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none dark:text-white text-sm" />
+                <input required name="products" value={formData.products} onChange={handleChange} type="text" placeholder="예: 한라봉, 사과, 샤인머스캣 등" className="w-full px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-farm-primary transition-all outline-none text-sm" />
               </div>
 
               <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -224,7 +224,7 @@ ${formData.message || '특이사항 없음'}
                   type="button"
                   disabled={isSubmitting}
                   onClick={handleGmailSubmit}
-                  className="py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-[1.8rem] font-bold text-lg shadow-xl hover:bg-farm-primary dark:hover:bg-farm-primary dark:hover:text-white transition-all transform active:scale-95 flex items-center justify-center gap-3"
+                  className="py-5 bg-gray-900 text-white rounded-[1.8rem] font-bold text-lg shadow-xl hover:bg-farm-primary transition-all transform active:scale-95 flex items-center justify-center gap-3"
                 >
                   {isSubmitting ? (
                     <i className="fas fa-circle-notch animate-spin"></i>
@@ -237,7 +237,7 @@ ${formData.message || '특이사항 없음'}
                 <button 
                   type="button"
                   onClick={handleManualMail}
-                  className="py-5 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white rounded-[1.8rem] font-bold text-lg shadow-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-all transform active:scale-95 flex items-center justify-center gap-3"
+                  className="py-5 bg-gray-100 text-gray-800 rounded-[1.8rem] font-bold text-lg shadow-md hover:bg-gray-200 transition-all transform active:scale-95 flex items-center justify-center gap-3"
                 >
                   <i className="fas fa-envelope-open-text"></i>
                   <span>다른 계정으로 연결하기</span>
@@ -248,17 +248,17 @@ ${formData.message || '특이사항 없음'}
         ) : showManualGuide ? (
           <div className="p-10 md:p-14 max-h-[90vh] overflow-y-auto custom-scrollbar">
             <div className="mb-10 text-center">
-              <div className="w-20 h-20 bg-blue-50 dark:bg-blue-900/30 rounded-[2rem] flex items-center justify-center mx-auto mb-6 text-blue-500 text-4xl">
+              <div className="w-20 h-20 bg-blue-50 rounded-[2rem] flex items-center justify-center mx-auto mb-6 text-blue-500 text-4xl">
                 <i className="fas fa-copy"></i>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">직접 메일 보내기</h2>
-              <p className="text-gray-500 dark:text-gray-400 font-light text-sm">
-                아래 내용을 복사하여 <strong className="text-gray-900 dark:text-white">{emailTo}</strong>로 보내주세요.
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">직접 메일 보내기</h2>
+              <p className="text-gray-500 font-light text-sm">
+                아래 내용을 복사하여 <strong className="text-gray-900">{emailTo}</strong>로 보내주세요.
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 relative group">
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative group">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">수신인</span>
                   <button 
@@ -266,10 +266,10 @@ ${formData.message || '특이사항 없음'}
                     className="text-xs font-bold text-farm-primary hover:underline"
                   >복사하기</button>
                 </div>
-                <p className="text-sm font-bold text-gray-800 dark:text-gray-200">{emailTo}</p>
+                <p className="text-sm font-bold text-gray-800 text-left">{emailTo}</p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 relative group">
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative group">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">메일 제목</span>
                   <button 
@@ -277,10 +277,10 @@ ${formData.message || '특이사항 없음'}
                     className="text-xs font-bold text-farm-primary hover:underline"
                   >복사하기</button>
                 </div>
-                <p className="text-sm font-bold text-gray-800 dark:text-gray-200">{subject}</p>
+                <p className="text-sm font-bold text-gray-800 text-left">{subject}</p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 relative group">
+              <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 relative group">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">메일 본문</span>
                   <button 
@@ -288,31 +288,31 @@ ${formData.message || '특이사항 없음'}
                     className="text-xs font-bold text-farm-primary hover:underline"
                   >복사하기</button>
                 </div>
-                <pre className="text-[13px] text-gray-600 dark:text-gray-400 font-sans whitespace-pre-wrap leading-relaxed max-h-48 overflow-y-auto custom-scrollbar pr-2">
+                <pre className="text-[13px] text-gray-600 font-sans whitespace-pre-wrap leading-relaxed max-h-48 overflow-y-auto custom-scrollbar pr-2 text-left">
                   {bodyContent}
                 </pre>
               </div>
 
-              <div className="pt-4 flex justify-center">
+              <div className="pt-4 flex justify-center text-left">
                 <button 
                   onClick={() => setShowManualGuide(false)}
-                  className="w-full py-5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-[1.8rem] font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="w-full py-5 bg-gray-100 text-gray-600 rounded-[1.8rem] font-bold hover:bg-gray-200 transition-colors"
                 >작성 화면으로 돌아가기</button>
               </div>
             </div>
           </div>
         ) : (
           <div className="p-16 text-center">
-            <div className="w-24 h-24 bg-green-100 dark:bg-green-900/40 rounded-[2rem] flex items-center justify-center mx-auto mb-8 text-farm-primary text-5xl animate-bounce">
+            <div className="w-24 h-24 bg-green-100 rounded-[2rem] flex items-center justify-center mx-auto mb-8 text-farm-primary text-5xl animate-bounce">
               <i className="fas fa-paper-plane"></i>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
               제휴 신청이<br />성공적으로 접수되었습니다!
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed max-w-xs mx-auto mb-12 font-light">
+            <p className="text-gray-500 leading-relaxed max-w-xs mx-auto mb-12 font-light text-center">
               담당자가 확인 후 입력하신 연락처로 빠르게 회신 드리겠습니다.
             </p>
-            <button onClick={onClose} className="px-14 py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-2xl">
+            <button onClick={onClose} className="px-14 py-5 bg-gray-900 text-white rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-2xl">
               확인
             </button>
           </div>

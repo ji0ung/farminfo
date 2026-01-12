@@ -45,13 +45,13 @@ const CollaborationCases: React.FC = () => {
   const extendedCases = [...cases, ...cases];
 
   return (
-    <section className="py-24 bg-white dark:bg-google-dark overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div ref={ref as any} className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-7xl mx-auto px-6 mb-16 text-left">
           <span className="text-farm-primary font-bold tracking-widest uppercase mb-3 block text-sm">Service Core Features</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 dark:text-white tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 tracking-tight leading-tight">
             홈쇼핑에 특화된 <br className="hidden sm:block" />
-            <span className="text-farm-primary font-medium">유일한 매체</span>의 위력을 확인하세요
+            <span className="text-farm-primary font-light">유일한 매체</span>의 위력을 확인하세요
           </h2>
         </div>
 
@@ -91,8 +91,8 @@ const CollaborationCases: React.FC = () => {
             ))}
           </div>
 
-          <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white dark:from-google-dark to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white dark:from-google-dark to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
         </div>
       </div>
 

@@ -16,17 +16,15 @@ const TargetAudience: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-google-dark">
+    <section className="py-20 bg-white">
       <div ref={ref as any} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 text-left">
             <span className="text-farm-primary font-bold tracking-wider uppercase mb-2 block text-sm">Target Audience</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
-              이런 사장님은 <br />주목해주세요!
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-thin text-gray-900 mb-8 leading-tight tracking-tight">
+              상품에 자신있다면, <br />
+              저희와 함께 해요
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 font-light">
-              지금 메가쇼 참가사 한정으로 <strong className="text-farm-primary font-bold">1,000만원 상당 혜택</strong>을 제공하고 있습니다.
-            </p>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
               <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000" alt="Fresh Farm Market" className="w-full h-auto object-cover max-h-[400px]" />
               <div className="absolute inset-0 bg-gradient-to-t from-farm-dark/80 to-transparent"></div>
@@ -38,12 +36,12 @@ const TargetAudience: React.FC = () => {
           </div>
 
           <div className="lg:w-1/2 w-full">
-            <div className="bg-farm-light dark:bg-google-surfaceDark rounded-3xl p-8 md:p-10 shadow-sm border border-green-100 dark:border-green-900/30">
+            <div className="bg-farm-light rounded-3xl p-8 md:p-10 shadow-sm border border-green-100">
               <ul className="space-y-4">
                 {checklist.map((item, index) => (
                   <li key={index} className="flex items-start text-left">
                     <i className="fas fa-check-circle text-farm-primary text-xl mt-1.5 mr-4"></i>
-                    <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">{item}</span>
+                    <span className="text-lg text-gray-700 font-medium">{item}</span>
                   </li>
                 ))}
               </ul>

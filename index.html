@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모아농장 파트너스 - 홈쇼핑모아</title>
+    
+    <!-- Fonts: Noto Sans KR - Added weight 100 for ultra-thin luxury feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                    colors: {
+                        google: {
+                            blue: '#4285F4',
+                            red: '#EA4335',
+                            yellow: '#FBBC05',
+                            green: '#34A853',
+                            gray: '#F8F9FA',
+                            dark: '#000000',
+                            surface: '#FFFFFF',
+                            surfaceDark: '#111111'
+                        },
+                        farm: {
+                            primary: '#00C853', // More vibrant "Apple-style" Green
+                            secondary: '#64DD17',
+                            light: '#FAFAFA',
+                            dark: '#000000'
+                        }
+                    },
+                    borderRadius: {
+                        '4xl': '2.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            cursor: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0; 
+            border-radius: 10px;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: rgba(0, 200, 83, 0.2);
+            color: #000000;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-google-dark dark:text-gray-100 transition-colors duration-300 overflow-x-hidden font-sans">
+    <div id="root"></div>
+</body>
+</html>
